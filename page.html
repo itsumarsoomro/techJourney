@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio of Mohammad Umar Farqleet Soomro</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg: #1e1e1e;
+      --primary-text: #fff;
+      --secondary-bg: #222;
+      --highlight: #ffa500;
+    }
+
+    [data-theme="light"] {
+      --primary-bg: #f9f9f9;
+      --primary-text: #333;
+      --secondary-bg: #e0e0e0;
+      --highlight: #007bff;
+    }
+
+    body {
+      font-family: 'Source Code Pro', monospace;
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background-color: var(--secondary-bg);
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: var(--highlight);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--highlight);
+      width: 0;
+      animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+    }
+
+    header nav a {
+      color: var(--primary-text);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 15px;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: var(--highlight);
+    }
+
+    header .theme-toggle {
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--primary-text);
+      transition: color 0.3s ease;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .about, .skills, .projects, .experience, .contact {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: var(--highlight);
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .skills-list, .projects-list, .experience-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills-list div, .projects-list div, .experience-list div {
+      background-color: var(--secondary-bg);
+      padding: 20px;
+      border-radius: 10px;
+      width: calc(33.333% - 10px);
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .skills-list div:hover, .projects-list div:hover, .experience-list div:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills-list div img, .projects-list div img, .experience-list div img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    footer {
+      background-color: var(--secondary-bg);
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--secondary-bg);
+      color: var(--primary-text);
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--highlight);
+      color: var(--primary-text);
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff8500;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: var(--highlight); }
+    }
+
+    @media(max-width: 900px) {
+      .skills-list div, .projects-list div, .experience-list div {
+        width: calc(50% - 10px);
+      }
+    }
+
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header nav {
+        margin-top: 15px;
+      }
+
+      .skills-list div, .projects-list div, .experience-list div {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mohammad Umar Farqleet Soomro</h1>
+  <nav>
+    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+    <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
+  </nav>
+  <span class="theme-toggle"><i class="fas fa-moon"></i></span>
+</header>
+
+<section class="container about">
+  <h2>About Me</h2>
+  <p>Experienced software developer with a first-class BSc in Computing, a proven track record in leading software projects, and a passion for innovation and technology. Winner of the Leicester Tigers Hackathon, skilled in optimization, problem-solving, and driving impactful solutions in dynamic environments.</p>
+</section>
+
+<section class="container skills">
+  <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+  <div class="skills-list">
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/c-sharp-logo.png" alt="C#">
+      <h3>C#</h3>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
+      <h3>JavaScript</h3>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
+      <h3>Python</h3>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js">
+      <h3>Node.js</h3>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React">
+      <h3>React</h3>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="SQL">
+      <h3>SQL</h3>
+    </div>
+  </div>
+</section>
+
+<section class="container projects">
+  <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+  <div class="projects-list">
+    <div class="project-card">
+      <h3>ARMS UNO</h3>
+      <p>Contributed to migrating legacy applications to a new cloud-based architecture using Azure, improving system performance, scalability, and security.</p>
+    </div>
+    <div class="project-card">
+      <h3>Payment Automation System</h3>
+      <p>Automated monthly payments of £1 million with 60% cost savings. Migrated from HSBC to Wise and improved processing efficiency.</p>
+    </div>
+    <div class="project-card">
+      <h3>Danone Employee Loyalty Scheme</h3>
+      <p>Redeveloped the system, increasing efficiency by 40% with enhanced tracking features and modernized UI.</p>
+    </div>
+    <div class="project-card">
+      <h3>Print-at-Home Coupon System</h3>
+      <p>Increased coupon redemption by 30% with system modernization using .NET, REST API, React, and SQL Server.</p>
+    </div>
+    <div class="project-card">
+      <h3>Parkie</h3>
+      <p>Developed an online parking booking system with Stripe integration, featuring real-time notifications and secure payments.</p>
+    </div>
+    <div class="project-card">
+      <h3>Citi Bike Data Analysis</h3>
+      <p>Analysed data for 48,000 Citi Bike users and created an interactive dashboard for key metrics, improving decision-making processes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container experience">
+  <h2><i class="fas fa-briefcase"></i> Experience</h2>
+  <div class="experience-list">
+    <div>
+      <h3>Full-Stack Developer – ARMS Innovation</h3>
+      <p><strong>August 2024 - Present</strong></p>
+      <p>Leading development of a SaaS platform, reducing page load times by 25% and supporting multi-tenant clients using React.js, Next.js, and Azure. Spearheading back-end development with .NET and Azure SQL Database, improving data processing efficiency by 20%.</p>
+    </div>
+    <div>
+      <h3>Software Developer – savi UK</h3>
+      <p><strong>June 2023 – July 2024</strong></p>
+      <p>Led the migration of the payment system from HSBC to Wise, automating over £1 million in monthly payments, reducing costs by 60%, and improving accuracy. Redeveloped the Danone employee loyalty system, adding a history page and modern UI for better tracking and increasing efficiency by 40%.</p>
+    </div>
+    <div>
+      <h3>Web Developer – Winstanley Wizards Table Tennis Club</h3>
+      <p><strong>April 2022 – Nov 2022</strong></p>
+      <p>Designed and launched a custom web platform, increasing membership sign-ups by 40% and streamlining event management. Managed the entire development process, ensuring timely delivery and high-quality results.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container contact">
+  <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+  <form id="contact-form" class="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 Mohammad Umar Farqleet Soomro. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("0d_3vttUPYBtL-vk9"); // Replace with your EmailJS User ID
+  })();
+
+  let sendCount = 0;
+  const maxMessages = 5;
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (sendCount >= maxMessages) {
+      alert("Message limit reached. Please try again later.");
+      return;
+    }
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then(function(response) {
+         console.log('SUCCESS!', response.status, response.text);
+         alert("Message sent successfully!");
+         sendCount++;
+      }, function(error) {
+         console.log('FAILED...', error);
+         alert("Failed to send the message. Please try again.");
+      });
+  });
+</script>
+
+</body>
+</html>
