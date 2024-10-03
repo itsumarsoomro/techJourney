@@ -187,6 +187,132 @@
         width: 100%;
       }
     }
+
+      :root {
+      --primary-bg: #1e1e1e;
+      --primary-text: #fff;
+      --secondary-bg: #222;
+      --highlight: #ffa500;
+    }
+
+    body {
+      font-family: 'Source Code Pro', monospace;
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background-color: var(--secondary-bg);
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: var(--highlight);
+    }
+
+    header nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    header nav a {
+      color: var(--primary-text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: var(--highlight);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: var(--highlight);
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .skills-list, .experience-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills-list div, .experience-list div {
+      background-color: var(--secondary-bg);
+      padding: 20px;
+      border-radius: 10px;
+      width: calc(33.333% - 10px);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skills-list div:hover, .experience-list div:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills-list div img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .skills h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .skills-list div h3, .experience-list div h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      background-color: var(--secondary-bg);
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    @media(max-width: 900px) {
+      .skills-list div, .experience-list div {
+        width: calc(50% - 10px);
+      }
+    }
+
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .skills-list div, .experience-list div {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
