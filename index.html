@@ -43,7 +43,11 @@
       margin: 0;
       font-size: 36px;
       color: var(--highlight);
-      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--highlight);
+      width: 0;
+      animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
     }
 
     header nav a {
@@ -71,7 +75,7 @@
       padding: 20px;
     }
 
-    .about, .skills, .projects {
+    .about, .skills, .projects, .contact {
       margin-bottom: 40px;
     }
 
@@ -143,6 +147,36 @@
     .project-card h3 {
       position: relative;
       z-index: 2;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--secondary-bg);
+      color: var(--primary-text);
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--highlight);
+      color: var(--primary-text);
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff8500;
     }
 
     @keyframes typing {
@@ -254,6 +288,16 @@
   </div>
 </section>
 
+<section class="container contact">
+  <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+  <form id="contact-form" class="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
 <footer>
   <p>&copy; 2024 Mohammad Umar Farqleet Soomro. All Rights Reserved.</p>
 </footer>
@@ -266,6 +310,39 @@
     document.body.setAttribute('data-theme', isDarkMode ? 'light' : 'dark');
     toggleTheme.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     isDarkMode = !isDarkMode;
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    // Initialize EmailJS with your user ID
+    emailjs.init("YOUR_USER_ID");  // <-- Replace with your EmailJS user ID
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Collect form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Define the email template parameters
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message
+    };
+
+    // Send the email using EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then(function(response) {
+         console.log('SUCCESS!', response.status, response.text);
+         alert("Message sent successfully!");
+      }, function(error) {
+         console.log('FAILED...', error);
+         alert("Failed to send the message. Please try again.");
+      });
   });
 </script>
 
