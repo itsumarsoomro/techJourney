@@ -101,10 +101,11 @@
       background-color: var(--secondary-bg);
       padding: 20px;
       border-radius: 10px;
-      width: calc(33.333% - 10px);
+      width: calc(46.333% - 10px);
       transition: transform 0.3s ease;
       display: flex;
       align-items: center;
+      flex-direction: column;
     }
 
     .skills-list div:hover, .projects-list div:hover, .experience-list div:hover {
@@ -159,7 +160,7 @@
 
     @keyframes typing {
       from { width: 0; }
-      to { width: 100%; }
+      to { width: 9.5%; }
     }
 
     @keyframes blink-caret {
@@ -261,7 +262,7 @@
       background-color: var(--secondary-bg);
       padding: 20px;
       border-radius: 10px;
-      width: calc(33.333% - 10px);
+      width: calc(46.333% - 10px);
       transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -298,6 +299,10 @@
     }
 
     @media(max-width: 900px) {
+      @keyframes typing {
+      from { width: 0; }
+      to { width: 28.5%; }
+    }
       .skills-list div, .experience-list div {
         width: calc(50% - 10px);
       }
@@ -308,7 +313,10 @@
         flex-direction: column;
         text-align: center;
       }
-
+      @keyframes typing {
+      from { width: 0; }
+      to { width: 60%; }
+      }
       .skills-list div, .experience-list div {
         width: 100%;
       }
@@ -318,11 +326,11 @@
 <body>
 
 <header>
-  <h1>Mohammad Umar Farqleet Soomro</h1>
+  <h1>Umar Soomro</h1>
   <nav>
-    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="#"><i class="fab fa-github"></i> GitHub</a>
-    <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
+    <a href="https://www.linkedin.com/in/umar-soomro-3aa47a199/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/itsumarsoomro"><i class="fab fa-github"></i> GitHub</a>
+    <!-- <a href=""><i class="fas fa-file-alt"></i> Resume</a> -->
   </nav>
   <span class="theme-toggle"><i class="fas fa-moon"></i></span>
 </header>
@@ -334,6 +342,7 @@
 
 <section class="container skills">
   <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+  <br>
   <div class="skills-list">
     <div>
       <h3>Backend Development</h3>
@@ -390,28 +399,29 @@
 
 <section class="container projects">
   <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+  <br>
   <div class="projects-list">
-    <div class="project-card">
+    <div>
       <h3>ARMS UNO</h3>
       <p>Contributed to migrating legacy applications to a new cloud-based architecture using Azure, improving system performance, scalability, and security.</p>
     </div>
-    <div class="project-card">
+    <div>
       <h3>Payment Automation System</h3>
       <p>Automated monthly payments of £1 million with 60% cost savings. Migrated from HSBC to Wise and improved processing efficiency.</p>
     </div>
-    <div class="project-card">
+    <div>
       <h3>Danone Employee Loyalty Scheme</h3>
       <p>Redeveloped the system, increasing efficiency by 40% with enhanced tracking features and modernized UI.</p>
     </div>
-    <div class="project-card">
+    <div>
       <h3>Print-at-Home Coupon System</h3>
       <p>Increased coupon redemption by 30% with system modernization using .NET, REST API, React, and SQL Server.</p>
     </div>
-    <div class="project-card">
+    <div>
       <h3>Parkie</h3>
       <p>Developed an online parking booking system with Stripe integration, featuring real-time notifications and secure payments.</p>
     </div>
-    <div class="project-card">
+    <div>
       <h3>Citi Bike Data Analysis</h3>
       <p>Analysed data for 48,000 Citi Bike users and created an interactive dashboard for key metrics, improving decision-making processes.</p>
     </div>
@@ -420,6 +430,7 @@
 
 <section class="container experience">
   <h2><i class="fas fa-briefcase"></i> Experience</h2>
+  <br>
   <div class="experience-list">
     <div>
       <h3>Full-Stack Developer – ARMS Innovation</h3>
@@ -448,6 +459,7 @@
 
 <section class="container contact">
   <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+  <br>
   <form id="contact-form" class="contact-form">
     <input type="text" id="name" placeholder="Your Name" required>
     <input type="email" id="email" placeholder="Your Email" required>
@@ -456,18 +468,32 @@
   </form>
 </section>
 
+<br>
+
 <footer>
-  <p>&copy; 2024 Mohammad Umar Farqleet Soomro. All Rights Reserved.</p>
+  <p>&copy; 2024 M U F S. All Rights Reserved.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+  const toggleTheme = document.querySelector('.theme-toggle');
+  let isDarkMode = true;
+
+  toggleTheme.addEventListener('click', () => {
+    document.body.setAttribute('data-theme', isDarkMode ? 'light' : 'dark');
+    toggleTheme.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    isDarkMode = !isDarkMode;
+  });
+</script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 <script type="text/javascript">
   (function() {
-    emailjs.init("0d_3vttUPYBtL-vk9"); // Replace with your EmailJS User ID
+    emailjs.init("0d_3vttUPYBtI-vk9"); // Replace with your EmailJS User ID
   })();
 
   let sendCount = 0;
-  const maxMessages = 5;
+  const maxMessages = 2;
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -487,7 +513,7 @@
       message: message
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    emailjs.send('service_rw8tnbk', 'template_21w0201', templateParams)
       .then(function(response) {
          console.log('SUCCESS!', response.status, response.text);
          alert("Message sent successfully!");
