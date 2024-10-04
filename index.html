@@ -298,6 +298,12 @@
       font-size: 14px;
     }
 
+    @media(max-width: 2500px) {
+      @keyframes typing {
+      from { width: 0; }
+      to { width: 19.5%; }
+    }
+  }
     @media(max-width: 900px) {
       @keyframes typing {
       from { width: 0; }
@@ -320,6 +326,11 @@
       .skills-list div, .experience-list div {
         width: 100%;
       }
+    }
+
+
+    .skills-list > div > p{
+      width: 80%;
     }
   </style>
 </head>
@@ -347,17 +358,21 @@
     <div>
       <h3>Backend Development</h3>
       <p><img src="https://img.icons8.com/color/48/000000/c-sharp-logo.png" alt="C#"> C#</p>
-      <p><img src="https://img.icons8.com/color/48/000000/asp-net.png" alt="ASP.NET"> ASP.NET</p>
+      <p><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt="ASP.NET"> ASP.NET</p>
+      <p><img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt="Entity Framework"> Entity Framework</p>
       <p><img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js"> Node.js</p>
       <p><img src="https://img.icons8.com/color/48/000000/graphql.png" alt="GraphQL"> GraphQL</p>
-      <p><img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL"> SQL</p>
+      <p><img src="https://img.icons8.com/?size=100&id=zrGYmJAiBY80&format=png&color=000000" alt="Rest"> RESTful API</p>
+      <p><img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL"> MS SQL</p>
     </div>
     <div>
       <h3>Frontend Development</h3>
       <p><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML"> HTML</p>
       <p><img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS"> CSS</p>
       <p><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"> JavaScript</p>
+      <p><img src="https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000" alt="TypeScript"> TypeScript</p>
       <p><img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React"> React</p>
+      <p><img src="https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000" alt="Next"> Next</p>
       <p><img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap"> Bootstrap</p>
     </div>
     <div>
@@ -368,25 +383,30 @@
     </div>
     <div>
       <h3>Methodologies</h3>
-      <p><img src="https://img.icons8.com/ios-filled/50/ffffff/git.png" alt="Git"> Git</p>
-      <p><img src="https://img.icons8.com/color/48/000000/agile.png" alt="Agile"> Agile (Scrum)</p>
+      <p><img src="https://img.icons8.com/?size=100&id=4uCCNoP4NtHC&format=png&color=000000" alt="Agile"> Agile (Scrum)</p>
       <p><img src="https://img.icons8.com/color/48/000000/test-tube.png" alt="TDD"> TDD</p>
+      <p><img src="https://img.icons8.com/?size=100&id=gJYEBtScHuoq&format=png&color=000000" alt="SOLID Principles"> SOLID Principles</p>
     </div>
     <div>
       <h3>Cloud Platforms & CI/CD</h3>
-      <p><img src="https://img.icons8.com/color/48/000000/azure.png" alt="Azure"> Azure</p>
+      <p><img src="https://img.icons8.com/?size=100&id=VLKafOkk3sBX&format=png&color=000000" alt="Azure"> Azure</p>
       <p><img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS"> AWS</p>
+      <p><img src="https://img.icons8.com/?size=100&id=31085&format=png&color=000000" alt="Heroku"> Heroku</p>
       <p><img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker"> Docker</p>
+      <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png" alt="Jenkins"> Jenkins</p>
+      <p><img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub Actions"> GitHub Actions</p>
     </div>
     <div>
       <h3>Testing Frameworks</h3>
-      <p><img src="https://img.icons8.com/color/48/000000/test-tube.png" alt="NUnit"> NUnit</p>
-      <p><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="Jest"> Jest</p>
+      <p><img src="https://avatars.githubusercontent.com/u/2678858?s=280&v=4" alt="NUnit"> NUnit</p>
+      <p><img src="https://avatars.githubusercontent.com/u/2092016?s=280&v=4" alt="NUnit"> xUnit</p>
+      <p><img src="https://miro.medium.com/v2/resize:fit:600/1*RQwRLQ0yyCvYmRn_Nst5yg.png" alt="Jest"> Jest</p>
+      <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrvVqEapXsm3wyIBCj0j6GwUMwEpsUElyGSA&s" alt="Cypress"> Cypress</p>
     </div>
     <div>
       <h3>Version Control</h3>
       <p><img src="https://img.icons8.com/ios-filled/50/ffffff/git.png" alt="Git"> Git</p>
-      <p><img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub"> GitHub</p>
+      <p><img src="https://i0.wp.com/gregorsuttie.com/wp-content/uploads/2021/02/tfs.jpg?fit=474%2C296&ssl=1" alt="TFS"> TFS</p>
     </div>
     <div>
       <h3>Operating Systems</h3>
