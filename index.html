@@ -161,7 +161,7 @@
 
     @keyframes typing {
       from { width: 0; }
-      to { width: 9.5%; }
+      to { width: 100%; }
     }
 
     @keyframes blink-caret {
@@ -223,6 +223,7 @@
     header nav {
       display: flex;
       gap: 15px;
+      padding: 20px 0px;
     }
 
     header nav a {
@@ -299,17 +300,9 @@
       font-size: 14px;
     }
 
-    @media(max-width: 2500px) {
-      @keyframes typing {
-      from { width: 0; }
-      to { width: 19.5%; }
-    }
-  }
+  
     @media(max-width: 900px) {
-      @keyframes typing {
-      from { width: 0; }
-      to { width: 28.5%; }
-    }
+ 
       .skills-list div, .experience-list div {
         width: calc(50% - 10px);
       }
@@ -320,10 +313,7 @@
         flex-direction: column;
         text-align: center;
       }
-      @keyframes typing {
-      from { width: 0; }
-      to { width: 63%; }
-      }
+
       .skills-list div, .experience-list div {
         width: 100%;
       }
@@ -333,12 +323,16 @@
     .skills-list > div > p{
       width: 80%;
     }
+
+    
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Umar Soomro</h1>
+  <div class="name">
+    <h1>Umar Soomro</h1>
+  </div>
   <nav>
     <a href="https://www.linkedin.com/in/umar-soomro-3aa47a199/"><i class="fab fa-linkedin"></i> LinkedIn</a>
     <a href="https://github.com/itsumarsoomro"><i class="fab fa-github"></i> GitHub</a>
@@ -485,7 +479,7 @@
     <input type="text" id="name" placeholder="Your Name" required>
     <input type="email" id="email" placeholder="Your Email" required>
     <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
+    <button type="submit">Send Message 📩</button>
   </form>
 </section>
 
